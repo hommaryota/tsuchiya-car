@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 .flex {
   display: flex;
   align-items: center;
@@ -6,6 +10,14 @@
 .img {
   width: 100%;
   height: auto;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .header {
@@ -20,7 +32,7 @@
   &__title {
     @extend .flex;
     &-logo {
-      animation-name: kf-titleLogo-rotate;
+      animation-name: kf-rotate;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -58,11 +70,163 @@
   }
 }
 
-@keyframes kf-titleLogo-rotate {
+@keyframes kf-rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.nav {
+  width: 100px;
+  height: 100%;
+  background-color: $cGreen;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__ul {
+    padding-top: 18px;
+  }
+
+  &__li {
+    cursor: pointer;
+  }
+
+  &__anniversary {
+    width: 81px;
+    margin: 0 auto;
+    position: relative;
+  }
+  &__anniversary-p {
+    @extend .flex;
+    background-color: $cGreen;
+    height: 81px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  &__campaign {
+    width: 54px;
+    margin: 0 auto;
+    margin-top: 29px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__lineup {
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 37px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__myPage {
+    width: 49px;
+    margin: 0 auto;
+    margin-top: 40px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__company {
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 39px;
+  }
+
+  &__contact {
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 41px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__shopping {
+    width: 53px;
+    margin: 0 auto;
+    margin-top: 37px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  .privacy {
+    width: 77px;
+    margin: 0 auto;
+    margin-top: 82px;
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}
+
+.anniversary,
+.company {
+  position: relative;
+  &__p {
+    @extend .flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 81px;
+    background-color: $cGreen;
+    border-radius: 0 45px 45px 0;
+    position: absolute;
+    color: $cWhite;
+    top: 50%;
+    left: 100%;
+    padding-left: 15px;
+    padding-right: 40px;
+    transform: translateX(-500px) translateY(-50%);
+    transition: transform 0.3s;
+    cursor: default;
+    &.hover {
+      transform: translateX(0px) translateY(-50%);
+    }
+    &.hover {
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 41px;
+        height: 7px;
+        background: #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 45%;
+        left: -71px;
+        cursor: pointer;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        left: auto;
+        left: -71px;
+      }
+    }
   }
 }

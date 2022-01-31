@@ -398,7 +398,12 @@ th {
   font-weight: bold;
 }
 
-.flex, .header__sns, .header__title, .header {
+html {
+  font-size: 16px;
+}
+
+.flex, .anniversary__p,
+.company__p, .nav__anniversary-p, .header__sns, .header__title, .header {
   display: flex;
   align-items: center;
 }
@@ -406,6 +411,14 @@ th {
 .img {
   width: 100%;
   height: auto;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .header {
@@ -417,8 +430,8 @@ th {
   padding-right: 38px;
 }
 .header__title-logo {
-  -webkit-animation-name: kf-titleLogo-rotate;
-  animation-name: kf-titleLogo-rotate;
+  -webkit-animation-name: kf-rotate;
+  animation-name: kf-rotate;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
@@ -452,7 +465,7 @@ th {
   width: 25px;
 }
 
-@-webkit-keyframes kf-titleLogo-rotate {
+@-webkit-keyframes kf-rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -461,12 +474,173 @@ th {
   }
 }
 
-@keyframes kf-titleLogo-rotate {
+@keyframes kf-rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
+}
+.nav {
+  width: 100px;
+  height: 100%;
+  background-color: #b8d200;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav__ul {
+  padding-top: 18px;
+}
+.nav__li {
+  cursor: pointer;
+}
+.nav__anniversary {
+  width: 81px;
+  margin: 0 auto;
+  position: relative;
+}
+.nav__anniversary-p {
+  background-color: #b8d200;
+  height: 81px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.nav__campaign {
+  width: 54px;
+  margin: 0 auto;
+  margin-top: 29px;
+}
+.nav__campaign:hover {
+  -webkit-animation-name: kf-rotate;
+  animation-name: kf-rotate;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.nav__lineup {
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 37px;
+}
+.nav__lineup:hover {
+  -webkit-animation-name: kf-rotate;
+  animation-name: kf-rotate;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.nav__myPage {
+  width: 49px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.nav__myPage:hover {
+  -webkit-animation-name: kf-rotate;
+  animation-name: kf-rotate;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.nav__company {
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 39px;
+}
+.nav__contact {
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 41px;
+}
+.nav__contact:hover {
+  -webkit-animation-name: kf-rotate;
+  animation-name: kf-rotate;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.nav__shopping {
+  width: 53px;
+  margin: 0 auto;
+  margin-top: 37px;
+}
+.nav__shopping:hover {
+  -webkit-animation-name: kf-rotate;
+  animation-name: kf-rotate;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.nav .privacy {
+  width: 77px;
+  margin: 0 auto;
+  margin-top: 82px;
+}
+.nav .privacy:hover {
+  opacity: 0.4;
+}
+
+.anniversary,
+.company {
+  position: relative;
+}
+.anniversary__p,
+.company__p {
+  justify-content: space-between;
+  width: 400px;
+  height: 81px;
+  background-color: #b8d200;
+  border-radius: 0 45px 45px 0;
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  left: 100%;
+  padding-left: 15px;
+  padding-right: 40px;
+  transform: translateX(-500px) translateY(-50%);
+  transition: transform 0.3s;
+  cursor: default;
+}
+.anniversary__p.hover,
+.company__p.hover {
+  transform: translateX(0px) translateY(-50%);
+}
+.anniversary__p.hover::before, .anniversary__p.hover::after,
+.company__p.hover::before,
+.company__p.hover::after {
+  content: "";
+  display: block;
+  width: 41px;
+  height: 7px;
+  background: #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 45%;
+  left: -71px;
+  cursor: pointer;
+}
+.anniversary__p.hover::after,
+.company__p.hover::after {
+  transform: rotate(-45deg);
+  left: auto;
+  left: -71px;
 }
 /*# sourceMappingURL=style.css.map */
