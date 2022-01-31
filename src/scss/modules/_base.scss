@@ -1,0 +1,68 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  width: 100%;
+  max-width: 1280px;
+  height: 100px;
+  @extend .flex;
+  justify-content: space-between;
+  padding-left: 59px;
+  padding-right: 38px;
+
+  &__title {
+    @extend .flex;
+    &-logo {
+      animation-name: kf-titleLogo-rotate;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    &-img {
+      margin-left: 8px;
+    }
+  }
+  &__sns {
+    @extend .flex;
+
+    &-tw {
+      width: 32px;
+      &:hover {
+        width: 40px;
+      }
+    }
+    &-fb {
+      width: 18px;
+      margin-left: 21px;
+
+      &:hover {
+        width: 24px;
+        margin-left: 15px;
+      }
+    }
+    &-pen {
+      margin-left: 28px;
+      width: 20px;
+      &:hover {
+        margin-left: 23px;
+        width: 25px;
+      }
+    }
+  }
+}
+
+@keyframes kf-titleLogo-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
