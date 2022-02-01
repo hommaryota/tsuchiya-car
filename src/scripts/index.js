@@ -11,13 +11,6 @@ anniversaryBtn.addEventListener("mouseout", function () {
   anniversaryHover.classList.remove("hover");
 });
 
-// const companyBtn = document.querySelector(".company");
-// companyBtn.addEventListener("mouseover", function () {
-//   document.querySelector(".nav__company").classList.add("hidden");
-// });
-// companyBtn.addEventListener("mouseout", function () {
-//   document.querySelector(".nav__company").classList.remove("hidden");
-// });
 const companyBtn = document.querySelector(".company");
 const companyNav = document.querySelector(".nav__company");
 const companyHover = document.querySelector(".company__p");
