@@ -1,24 +1,25 @@
-const anniversaryBtn = document.querySelector(".anniversary");
-const anniversaryNav = document.querySelector(".nav__anniversary");
-const anniversaryHover = document.querySelector(".anniversary__p");
-anniversaryBtn.addEventListener("mouseover", function () {
-  anniversaryNav.classList.add("hidden");
-  anniversaryHover.classList.add("hover");
-  anniversaryNav.classList.add("hover");
-});
-anniversaryBtn.addEventListener("mouseout", function () {
-  anniversaryNav.classList.remove("hidden");
-  anniversaryHover.classList.remove("hover");
+// nav anniversary
+document.querySelector(".anniversary").addEventListener("mouseover", function () {
+  document.querySelector(".anniversary-img").classList.add("hidden");
+  document.querySelector(".anniversary__p").classList.add("hover");
+  document.querySelector(".nav__anniversary").classList.add("hover");
 });
 
-const companyBtn = document.querySelector(".company");
-const companyNav = document.querySelector(".nav__company");
-const companyHover = document.querySelector(".company__p");
-companyBtn.addEventListener("mouseover", function () {
-  companyNav.classList.add("hidden");
-  companyHover.classList.add("hover");
+document.querySelector(".anniversary").addEventListener("mouseout", function () {
+  document.querySelector(".anniversary-img").classList.remove("hidden");
+  document.querySelector(".anniversary__p").classList.remove("hover");
+  document.querySelector(".nav__anniversary").classList.remove("hover");
 });
-companyBtn.addEventListener("mouseout", function () {
-  companyNav.classList.remove("hidden");
-  companyHover.classList.remove("hover");
+
+// nav company
+document.querySelector(".company").addEventListener("mouseover", function () {
+  document.querySelector(".company-img").classList.add("hidden");
+  document.querySelector(".company__p").classList.add("hover");
+  document.querySelector(".nav__company").classList.add("hover");
+});
+
+document.querySelector(".company").addEventListener("mouseout", function () {
+  document.querySelector(".company-img").classList.remove("hidden");
+  document.querySelector(".company__p").classList.remove("hover");
+  document.querySelector(".nav__company").classList.remove("hover");
 });
