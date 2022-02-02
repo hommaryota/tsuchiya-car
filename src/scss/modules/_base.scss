@@ -350,11 +350,17 @@ body {
   &::after {
     content: "";
   }
+  &:hover {
+    opacity: 0.4;
+  }
 }
 .swiper-button-prev {
   left: -2px;
   &::after {
     content: "";
+  }
+  &:hover {
+    opacity: 0.4;
   }
 }
 .swiper-pagination-bullet {
@@ -371,4 +377,53 @@ body {
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 2px;
+}
+
+//
+.car {
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+
+  &__wrapper {
+    width: 1090px;
+    margin: 0 auto;
+    margin-top: 21px;
+  }
+
+  &__next {
+    max-width: 1091px;
+    display: flex;
+    align-items: flex-end;
+    &-border {
+      height: 3px;
+      animation-name: kf-border;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+  &__prev {
+    margin-top: 7px;
+    max-width: 1091px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    &-border {
+      height: 3px;
+      animation-name: kf-border;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes kf-border {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }

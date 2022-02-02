@@ -750,12 +750,18 @@ body {
 .swiper-button-next::after {
   content: "";
 }
+.swiper-button-next:hover {
+  opacity: 0.4;
+}
 
 .swiper-button-prev {
   left: -2px;
 }
 .swiper-button-prev::after {
   content: "";
+}
+.swiper-button-prev:hover {
+  opacity: 0.4;
 }
 
 .swiper-pagination-bullet {
@@ -774,5 +780,68 @@ body {
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 2px;
+}
+
+.car {
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+}
+.car__wrapper {
+  width: 1090px;
+  margin: 0 auto;
+  margin-top: 21px;
+}
+.car__next {
+  max-width: 1091px;
+  display: flex;
+  align-items: flex-end;
+}
+.car__next-border {
+  height: 3px;
+  -webkit-animation-name: kf-border;
+  animation-name: kf-border;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.car__prev {
+  margin-top: 7px;
+  max-width: 1091px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+.car__prev-border {
+  height: 3px;
+  -webkit-animation-name: kf-border;
+  animation-name: kf-border;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes kf-border {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes kf-border {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
