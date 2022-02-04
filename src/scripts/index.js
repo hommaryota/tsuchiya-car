@@ -51,5 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function shopClick() {
     document.querySelector(".active").classList.remove("active");
     this.classList.add("active");
+
+    document.querySelector(".is-active").classList.remove("is-active");
+    const arrayList = Array.prototype.slice.call(shopList);
+    const index = arrayList.indexOf(this);
+    console.log(index);
+    document.querySelectorAll(".shop__detail")[index].classList.add("is-active");
   }
 });

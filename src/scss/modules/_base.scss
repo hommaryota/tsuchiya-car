@@ -431,8 +431,8 @@ body {
 .shop {
   width: 100%;
   min-width: 1280px;
-  margin-top: 23px;
   padding-left: 100px;
+  margin-top: 23px;
 
   &__wrapper {
     display: flex;
@@ -526,7 +526,6 @@ body {
       top: 21px;
       right: 22px;
     }
-
     &.is-active {
       display: block;
     }
@@ -538,7 +537,7 @@ body {
     &-h2 {
       font-size: 1.375rem;
       position: relative;
-      width: 218px;
+      display: inline-block;
       margin-left: 20px;
       &::before {
         content: url(../img/shop-h2-before.png);
@@ -549,21 +548,25 @@ body {
       &::after {
         content: url(../img/shop-h2-after.png);
         position: absolute;
-        top: -2.5px;
-        right: -10px;
+        top: -3.5px;
+        right: -40px;
       }
     }
     &-address {
-      width: 277px;
       margin-top: 23px;
       font-size: 0.875rem;
       line-height: 1.5rem;
-      position: relative;
-      &::after {
-        content: url(../img/shop-address-after.png);
-        position: absolute;
-        top: 0;
-        right: -37px;
+      & > p {
+        position: relative;
+        &:nth-child(1) {
+          display: inline;
+          &::after {
+            content: url(../img/shop-address-after.png);
+            position: absolute;
+            top: -5px;
+            right: -50px;
+          }
+        }
       }
     }
   }
@@ -572,7 +575,7 @@ body {
     width: 500px;
     &-area {
       text-align: justify;
-      font-size: 1.015rem;
+      font-size: 1.005rem;
       line-height: 1.5rem;
     }
     &-img {
@@ -607,5 +610,37 @@ body {
         opacity: 0.4;
       }
     }
+  }
+}
+
+.footer {
+  width: 100%;
+  min-width: 1280px;
+  margin-top: 40px;
+
+  &__wrapper {
+    @extend .flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__topBtn {
+    width: 100%;
+    height: 30px;
+    @extend .flex;
+    justify-content: center;
+    background-color: $cFooterLiteGreen;
+    color: $cWhite;
+    font-weight: bold;
+  }
+
+  &__small {
+    width: 100%;
+    height: 45px;
+    @extend .flex;
+    justify-content: center;
+    background-color: $cFooterGreen;
+    color: $cWhite;
+    font-size: 0.875rem;
   }
 }
