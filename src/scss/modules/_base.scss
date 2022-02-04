@@ -443,29 +443,169 @@ body {
 
   &__list {
     width: 474px;
-    overflow: hidden;
+
     &-li {
-      cursor: pointer;
+      height: 130px;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        width: 1000px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        transition: background 0.3s;
+        pointer-events: none;
+      }
+      &.hover {
+        height: 180px;
+      }
+      &.active {
+        height: 180px;
+        &::after {
+          content: "";
+          background: none;
+        }
+      }
+    }
+    &-img {
+      transform: scale(1);
+      transition: transform 0.3s;
       position: relative;
       &:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s;
+        transform: scale(1.1);
       }
-      &.non-active {
-        height: 130px;
-        background: rgba(0, 0, 0, 0.5);
-        &:hover {
-          height: 180px;
-          transform: scale(1.05);
-          transition: transform 0.3s;
-        }
+      &.ichikawa {
+        top: -165px;
+        left: -90px;
+      }
+      &.shinkoiwa {
+        top: -150px;
+        left: -145px;
+      }
+      &.chibakita {
+        top: -85px;
+        left: -65px;
+      }
+      &.narita {
+        top: -255px;
+        left: -165px;
+      }
+      &.mobara {
+        top: -85px;
+        left: -75px;
+      }
+      &.togane {
+        top: -160px;
+        left: -100px;
       }
     }
     &-title {
       position: absolute;
+      z-index: 10;
       top: 50%;
       left: 50px;
       transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }
+
+  &__detail {
+    width: 100%;
+    padding-top: 91px;
+    padding-left: 50px;
+    position: relative;
+    display: none;
+    &::before {
+      content: url(../img/shop-map1.png);
+      position: absolute;
+      top: 21px;
+      right: 22px;
+    }
+
+    &.is-active {
+      display: block;
+    }
+  }
+  &__access {
+    width: 500px;
+    padding-bottom: 40px;
+    border-bottom: 3px solid $cBorderGreen;
+    &-h2 {
+      font-size: 1.375rem;
+      position: relative;
+      width: 218px;
+      margin-left: 20px;
+      &::before {
+        content: url(../img/shop-h2-before.png);
+        position: absolute;
+        top: 0.5px;
+        left: -20px;
+      }
+      &::after {
+        content: url(../img/shop-h2-after.png);
+        position: absolute;
+        top: -2.5px;
+        right: -10px;
+      }
+    }
+    &-address {
+      width: 277px;
+      margin-top: 23px;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      position: relative;
+      &::after {
+        content: url(../img/shop-address-after.png);
+        position: absolute;
+        top: 0;
+        right: -37px;
+      }
+    }
+  }
+  &__text {
+    margin-top: 30px;
+    width: 500px;
+    &-area {
+      text-align: justify;
+      font-size: 1.015rem;
+      line-height: 1.5rem;
+    }
+    &-img {
+      margin-top: 20px;
+      & > span {
+        display: inline-block;
+        width: 155px;
+        height: 93px;
+        background-image: url(../img/shop-clip.png);
+        &:nth-child(2) {
+          margin-left: 12px;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+  &__info {
+    margin-top: 48px;
+    &-title {
+      margin-left: 20px;
+      position: relative;
+      &::before {
+        content: url(../img/shop-h2-before.png);
+        position: absolute;
+        top: -2px;
+        left: -20px;
+      }
+    }
+    &-event {
+      margin-top: 8px;
+      &:hover {
+        opacity: 0.4;
+      }
     }
   }
 }

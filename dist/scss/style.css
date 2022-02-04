@@ -858,29 +858,165 @@ body {
 }
 .shop__list {
   width: 474px;
-  overflow: hidden;
 }
 .shop__list-li {
-  cursor: pointer;
+  height: 130px;
+  overflow: hidden;
   position: relative;
 }
-.shop__list-li:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s;
-}
-.shop__list-li.non-active {
-  height: 130px;
+.shop__list-li::after {
   background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 1000px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  transition: background 0.3s;
+  pointer-events: none;
 }
-.shop__list-li.non-active:hover {
+.shop__list-li.hover {
   height: 180px;
-  transform: scale(1.05);
+}
+.shop__list-li.active {
+  height: 180px;
+}
+.shop__list-li.active::after {
+  content: "";
+  background: none;
+}
+.shop__list-img {
+  transform: scale(1);
   transition: transform 0.3s;
+  position: relative;
+}
+.shop__list-img:hover {
+  transform: scale(1.1);
+}
+.shop__list-img.ichikawa {
+  top: -165px;
+  left: -90px;
+}
+.shop__list-img.shinkoiwa {
+  top: -150px;
+  left: -145px;
+}
+.shop__list-img.chibakita {
+  top: -85px;
+  left: -65px;
+}
+.shop__list-img.narita {
+  top: -255px;
+  left: -165px;
+}
+.shop__list-img.mobara {
+  top: -85px;
+  left: -75px;
+}
+.shop__list-img.togane {
+  top: -160px;
+  left: -100px;
 }
 .shop__list-title {
   position: absolute;
+  z-index: 10;
   top: 50%;
   left: 50px;
   transform: translateY(-50%);
+  pointer-events: none;
+}
+.shop__detail {
+  width: 100%;
+  padding-top: 91px;
+  padding-left: 50px;
+  position: relative;
+  display: none;
+}
+.shop__detail::before {
+  content: url(../img/shop-map1.png);
+  position: absolute;
+  top: 21px;
+  right: 22px;
+}
+.shop__detail.is-active {
+  display: block;
+}
+.shop__access {
+  width: 500px;
+  padding-bottom: 40px;
+  border-bottom: 3px solid #d0e259;
+}
+.shop__access-h2 {
+  font-size: 1.375rem;
+  position: relative;
+  width: 218px;
+  margin-left: 20px;
+}
+.shop__access-h2::before {
+  content: url(../img/shop-h2-before.png);
+  position: absolute;
+  top: 0.5px;
+  left: -20px;
+}
+.shop__access-h2::after {
+  content: url(../img/shop-h2-after.png);
+  position: absolute;
+  top: -2.5px;
+  right: -10px;
+}
+.shop__access-address {
+  width: 277px;
+  margin-top: 23px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  position: relative;
+}
+.shop__access-address::after {
+  content: url(../img/shop-address-after.png);
+  position: absolute;
+  top: 0;
+  right: -37px;
+}
+.shop__text {
+  margin-top: 30px;
+  width: 500px;
+}
+.shop__text-area {
+  text-align: justify;
+  font-size: 1.015rem;
+  line-height: 1.5rem;
+}
+.shop__text-img {
+  margin-top: 20px;
+}
+.shop__text-img > span {
+  display: inline-block;
+  width: 155px;
+  height: 93px;
+  background-image: url(../img/shop-clip.png);
+}
+.shop__text-img > span:nth-child(2) {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.shop__info {
+  margin-top: 48px;
+}
+.shop__info-title {
+  margin-left: 20px;
+  position: relative;
+}
+.shop__info-title::before {
+  content: url(../img/shop-h2-before.png);
+  position: absolute;
+  top: -2px;
+  left: -20px;
+}
+.shop__info-event {
+  margin-top: 8px;
+}
+.shop__info-event:hover {
+  opacity: 0.4;
 }
 /*# sourceMappingURL=style.css.map */
