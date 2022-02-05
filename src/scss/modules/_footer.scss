@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  min-width: 1280px;
+  margin-top: 40px;
+
+  &__wrapper {
+    @extend .flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__topBtn {
+    width: 100%;
+    height: 30px;
+    @extend .flex;
+    justify-content: center;
+    background-color: $cFooterLiteGreen;
+    color: $cWhite;
+    font-weight: bold;
+  }
+
+  &__small {
+    width: 100%;
+    height: 45px;
+    @extend .flex;
+    justify-content: center;
+    background-color: $cFooterGreen;
+    color: $cWhite;
+    font-size: 0.875rem;
+  }
+}

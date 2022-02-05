@@ -1,0 +1,43 @@
+@import "../scss/modules/reset";
+@import "../scss/modules/variables";
+@import "../scss/modules/nav";
+@import "../scss/modules/footer";
+
+body {
+}
+
+.page {
+  &__title {
+    width: 277px;
+    height: 37px;
+    background-color: #323232;
+    border-radius: 17px;
+    position: fixed;
+    top: 124px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    &-a {
+      margin-left: 164px;
+    }
+  }
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  min-width: 1280px;
+  min-height: 1000px;
+  position: fixed;
+  top: 0;
+  left: 100px;
+  background-image: url(../img/company/back-img1.png);
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+}
+
+.idea {
+  height: 3000px;
+}

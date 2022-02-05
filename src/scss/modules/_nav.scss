@@ -1,0 +1,266 @@
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.header {
+  width: 100%;
+  max-width: 1280px;
+  height: 100px;
+  @extend .flex;
+  justify-content: space-between;
+  padding-left: 59px;
+  padding-right: 38px;
+
+  &__title {
+    @extend .flex;
+    &-logo {
+      animation-name: kf-rotate;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    &-img {
+      margin-left: 8px;
+    }
+  }
+  &__sns {
+    @extend .flex;
+
+    &-tw {
+      width: 32px;
+      &:hover {
+        width: 40px;
+      }
+    }
+    &-fb {
+      width: 18px;
+      margin-left: 21px;
+
+      &:hover {
+        width: 24px;
+        margin-left: 15px;
+      }
+    }
+    &-pen {
+      margin-left: 28px;
+      width: 20px;
+      &:hover {
+        margin-left: 23px;
+        width: 25px;
+      }
+    }
+  }
+}
+
+@keyframes kf-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav {
+  width: 100px;
+  height: 100%;
+  background-color: $cGreen;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+
+  &__ul {
+    padding-top: 18px;
+  }
+
+  &__li {
+    cursor: pointer;
+  }
+
+  &__anniversary {
+    width: 100px;
+    position: relative;
+    background-color: $cGreen;
+    z-index: 5;
+    & > a {
+      width: 81px;
+      display: block;
+      margin: 0 auto;
+    }
+    &.hover {
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 41px;
+        height: 7px;
+        background: #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        cursor: pointer;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        left: 30%;
+      }
+    }
+  }
+
+  &__anniversary-p {
+    @extend .flex;
+    background-color: $cGreen;
+    height: 81px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  &__campaign {
+    width: 54px;
+    margin: 0 auto;
+    margin-top: 29px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__lineup {
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 37px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__myPage {
+    width: 49px;
+    margin: 0 auto;
+    margin-top: 40px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__company {
+    width: 100%;
+    height: 100%;
+    margin-top: 39px;
+    background-color: $cGreen;
+    & > a {
+      width: 50px;
+      display: block;
+      margin: 0 auto;
+    }
+    &.hover {
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 41px;
+        height: 7px;
+        background: $cWhite;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        cursor: pointer;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        left: 30%;
+      }
+    }
+  }
+
+  &__contact {
+    width: 50px;
+    margin: 0 auto;
+    margin-top: 41px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__shopping {
+    width: 53px;
+    margin: 0 auto;
+    margin-top: 37px;
+    &:hover {
+      animation-name: kf-rotate;
+      animation-duration: 0.3s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+    }
+  }
+
+  .privacy {
+    width: 77px;
+    margin: 0 auto;
+    margin-top: 82px;
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}
+
+.anniversary,
+.company {
+  position: relative;
+  &__p {
+    @extend .flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 81px;
+    background-color: $cGreen;
+    border-radius: 0 45px 45px 0;
+    position: absolute;
+    z-index: -10;
+    color: $cWhite;
+    top: 50%;
+    left: 100%;
+    padding-left: 15px;
+    padding-right: 40px;
+    transform: translateX(-500px) translateY(-50%);
+    transition: transform 0.3s;
+    cursor: default;
+    &.hover {
+      transform: translateX(0px) translateY(-50%);
+    }
+    & > p {
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+}
