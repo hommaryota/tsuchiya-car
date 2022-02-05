@@ -1012,4 +1012,56 @@ th {
 .show {
   display: block;
 }
+
+.history {
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+  padding-top: 121px;
+  padding-bottom: 43px;
+  background-image: url(../img/company/back-img3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.history__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1090px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #ffffff;
+}
+.history__left {
+  border-left: 1px solid #b8d200;
+}
+.history__right {
+  border-left: 1px solid #b8d200;
+}
+.history__list {
+  margin-bottom: 32px;
+  display: flex;
+}
+.history__list-title {
+  width: 170px;
+  height: 22px;
+  color: #323232;
+}
+.history__list-p {
+  display: inline-block;
+  padding: 2px 21px;
+  background-color: #b8d200;
+  border-radius: 0 10px 10px 0;
+}
+.history__list-p.b {
+  background-color: #dbe87f;
+}
+.history__contents {
+  width: 340px;
+  line-height: 20px;
+}
+
+.footer {
+  margin-top: 0;
+}
 /*# sourceMappingURL=style.css.map */

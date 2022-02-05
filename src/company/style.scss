@@ -7,7 +7,7 @@
   &__title {
     width: 277px;
     height: 37px;
-    background-color: #323232;
+    background-color: $cBlack;
     border-radius: 17px;
     position: fixed;
     top: 124px;
@@ -74,6 +74,7 @@
   background-image: url(../img/company/back-img2.png);
   background-size: cover;
   background-repeat: no-repeat;
+
   &__wrapper {
     width: 1090px;
     margin: 0 auto;
@@ -333,4 +334,61 @@
 }
 .show {
   display: block;
+}
+
+.history {
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+  padding-top: 121px;
+  padding-bottom: 43px;
+  background-image: url(../img/company/back-img3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1090px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: $cWhite;
+  }
+
+  &__left {
+    border-left: 1px solid $cGreen;
+  }
+
+  &__right {
+    border-left: 1px solid $cGreen;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+    display: flex;
+    &-title {
+      width: 170px;
+      height: 22px;
+      color: $cBlack;
+    }
+    &-p {
+      display: inline-block;
+      padding: 2px 21px;
+      background-color: $cGreen;
+      border-radius: 0 10px 10px 0;
+      &.b {
+        background-color: #dbe87f;
+      }
+    }
+  }
+
+  &__contents {
+    width: 340px;
+    line-height: 20px;
+  }
+}
+
+.footer {
+  margin-top: 0;
 }
