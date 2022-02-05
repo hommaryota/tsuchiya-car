@@ -14,14 +14,11 @@ const cb = function (entries, observe) {
     // isIntersectingプロパティ→trueの場合は監視対象がスクロールに入った時
     // falseの時は、監視対象が出た時
     if (entry.isIntersecting) {
-      console.log("in");
       // entry(監視対象のio.observe(child);が入ってきた場合)
       entry.target.classList.add("inView");
-
       // 入った時に完了させたい場合はunobserveメソッドを使う
       // observer.unobserve(entry.target);
     } else {
-      console.log("out");
       entry.target.classList.remove("inView");
     }
   });

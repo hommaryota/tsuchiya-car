@@ -62,19 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // company画面 tab切り替え
 document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.getElementsByClassName("btn");
+  const tabs = document.querySelectorAll(".btn");
   const hover = document.getElementsByClassName("btn__hover");
   for (let i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener("click", tabSwitch);
   }
 
   function tabSwitch() {
-    document.getElementsByClassName("btn__hover active")[0].classList.remove("active");
+    document.querySelector(".active").classList.remove("active");
 
-    document.getElementsByClassName("tab show")[0].classList.remove("show");
+    document.querySelector(".show").classList.remove("show");
     const arrayTabs = Array.prototype.slice.call(tabs);
     const index = arrayTabs.indexOf(this);
     hover[index].classList.add("active");
-    document.getElementsByClassName("tab")[index].classList.add("show");
+    document.querySelectorAll(".tab")[index].classList.add("show");
   }
 });
