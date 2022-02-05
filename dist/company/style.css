@@ -752,4 +752,29 @@ th {
 .idea__child.inView {
   opacity: 1;
 }
+
+.greeting {
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+  padding-bottom: 90px;
+  background-image: url(../img/company/back-img2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.greeting__wrapper {
+  width: 1090px;
+  margin: 0 auto;
+  padding-top: 84px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.greeting__title {
+  display: flex;
+  justify-content: center;
+}
+.greeting__text {
+  margin-top: 39px;
+}
 /*# sourceMappingURL=style.css.map */

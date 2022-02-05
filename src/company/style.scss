@@ -65,3 +65,28 @@ body {
     }
   }
 }
+
+.greeting {
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+  padding-bottom: 90px;
+  background-image: url(../img/company/back-img2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__wrapper {
+    width: 1090px;
+    margin: 0 auto;
+    padding-top: 84px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    margin-top: 39px;
+  }
+}
