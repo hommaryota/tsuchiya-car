@@ -59,3 +59,22 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".shop__detail")[index].classList.add("is-active");
   }
 });
+
+// company画面 tab切り替え
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.getElementsByClassName("btn");
+  const hover = document.getElementsByClassName("btn__hover");
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener("click", tabSwitch);
+  }
+
+  function tabSwitch() {
+    document.getElementsByClassName("btn__hover active")[0].classList.remove("active");
+
+    document.getElementsByClassName("tab show")[0].classList.remove("show");
+    const arrayTabs = Array.prototype.slice.call(tabs);
+    const index = arrayTabs.indexOf(this);
+    hover[index].classList.add("active");
+    document.getElementsByClassName("tab")[index].classList.add("show");
+  }
+});

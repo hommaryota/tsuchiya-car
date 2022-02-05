@@ -2,6 +2,7 @@
 const child1 = document.querySelector(".child1");
 const child2 = document.querySelector(".child2");
 const child3 = document.querySelector(".child3");
+const child4 = document.querySelector(".child4");
 
 // ioに渡すコールバック関数を定義
 // entries→io.observe()には複数要素を登録できる
@@ -45,3 +46,4 @@ const io = new IntersectionObserver(cb, options);
 io.observe(child1);
 io.observe(child2);
 io.observe(child3);
+io.observe(child4);

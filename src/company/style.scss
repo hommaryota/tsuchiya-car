@@ -3,9 +3,6 @@
 @import "../scss/modules/nav";
 @import "../scss/modules/footer";
 
-body {
-}
-
 .page {
   &__title {
     width: 277px;
@@ -42,7 +39,7 @@ body {
   width: 100%;
   min-width: 1280px;
   padding-left: 100px;
-  padding-bottom: 500px;
+  padding-bottom: 220px;
   &__wrapper {
     width: 1090px;
     margin: 0 auto;
@@ -55,10 +52,13 @@ body {
     transition: 0.3s;
 
     &.child2 {
-      margin-top: 500px;
+      margin-top: 400px;
     }
     &.child3 {
-      margin-top: 500px;
+      margin-top: 400px;
+    }
+    &.child4 {
+      margin-top: 400px;
     }
     &.inView {
       opacity: 1;
@@ -89,4 +89,248 @@ body {
   &__text {
     margin-top: 39px;
   }
+}
+
+.service {
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+  padding-bottom: 90px;
+  background-color: $cWhite;
+
+  &__wrapper {
+    width: 1090px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__h2 {
+    position: relative;
+    width: 253px;
+    height: 117px;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  &__img {
+    position: relative;
+    top: -45px;
+    width: 619px;
+    margin: 0 auto;
+  }
+}
+
+/* service btn */
+.btn {
+  &__1,
+  &__2,
+  &__3,
+  &__4,
+  &__5,
+  &__6 {
+    display: block;
+    width: 68px;
+    height: 67px;
+    position: absolute;
+    cursor: pointer;
+  }
+  &__1 {
+    top: 87px;
+    left: 523px;
+  }
+  &__2 {
+    top: 354px;
+    left: 584px;
+  }
+  &__3 {
+    top: 569px;
+    left: 413px;
+  }
+  &__4 {
+    top: 569px;
+    left: 139px;
+  }
+  &__5 {
+    top: 355px;
+    left: -32px;
+  }
+  &__6 {
+    top: 87px;
+    left: 29px;
+  }
+  &__hover-1,
+  &__hover-2,
+  &__hover-3,
+  &__hover-4,
+  &__hover-5,
+  &__hover-6 {
+    display: block;
+    width: 155px;
+    height: 155px;
+    position: absolute;
+    cursor: pointer;
+  }
+  &__hover-1 {
+    top: 40px;
+    left: 480px;
+  }
+  &__hover-2 {
+    top: 315px;
+    left: 535px;
+  }
+  &__hover-3 {
+    top: 525px;
+    left: 380px;
+  }
+  &__hover-4 {
+    top: 525px;
+    left: 80px;
+  }
+  &__hover-5 {
+    top: 315px;
+    left: -70px;
+  }
+  &__hover-6 {
+    top: 40px;
+    left: -10px;
+  }
+  &__hover {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+/* service tab */
+.area {
+  &__1 {
+    position: absolute;
+    top: 147px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__2 {
+    position: absolute;
+    top: 136px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__3 {
+    position: absolute;
+    top: 149px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__4 {
+    position: absolute;
+    top: 147px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__5 {
+    position: absolute;
+    top: 137px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__6 {
+    position: absolute;
+    top: 137px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__h2-1 {
+    width: 198px;
+    margin: 0 auto;
+  }
+  &__h2-2 {
+    width: 334px;
+    margin: 0 auto;
+  }
+  &__h2-3 {
+    width: 378px;
+    margin: 0 auto;
+  }
+  &__h2-4 {
+    width: 390px;
+    margin: 0 auto;
+  }
+  &__h2-5 {
+    width: 260px;
+    margin: 0 auto;
+  }
+  &__h2-6 {
+    width: 271px;
+    margin: 0 auto;
+  }
+  &__text-1 {
+    width: 369px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  &__text-2 {
+    width: 411px;
+    margin: 0 auto;
+    margin-top: 21px;
+  }
+  &__text-3 {
+    width: 370px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  &__text-4 {
+    width: 397px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  &__text-5 {
+    width: 370px;
+    margin: 0 auto;
+    margin-top: 21px;
+  }
+  &__text-6 {
+    width: 370px;
+    margin: 0 auto;
+    margin-top: 21px;
+  }
+  &__img-1 {
+    width: 294px;
+    margin: 0 auto;
+    margin-top: 26px;
+  }
+  &__img-2 {
+    width: 294px;
+    margin: 0 auto;
+    margin-top: 43px;
+  }
+  &__img-3 {
+    width: 294px;
+    margin: 0 auto;
+    margin-top: 33px;
+  }
+  &__img-4 {
+    width: 294px;
+    margin: 0 auto;
+    margin-top: 33px;
+  }
+  &__img-5 {
+    width: 294px;
+    margin: 0 auto;
+    margin-top: 26px;
+  }
+  &__img-6 {
+    width: 294px;
+    margin: 0 auto;
+    margin-top: 33px;
+  }
+}
+.none {
+  display: none;
+}
+.tab {
+  display: none;
+}
+.show {
+  display: block;
 }
