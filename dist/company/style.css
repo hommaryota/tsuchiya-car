@@ -727,6 +727,29 @@ th {
 }
 
 .idea {
-  height: 3000px;
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+  padding-bottom: 500px;
+}
+.idea__wrapper {
+  width: 1090px;
+  margin: 0 auto;
+  padding-top: 85px;
+}
+.idea__child {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.idea__child.child2 {
+  margin-top: 500px;
+}
+.idea__child.child3 {
+  margin-top: 500px;
+}
+.idea__child.inView {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

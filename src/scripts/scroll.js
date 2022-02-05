@@ -1,5 +1,7 @@
 // 監視対象
-const child = document.querySelector(".child");
+const child1 = document.querySelector(".child1");
+const child2 = document.querySelector(".child2");
+const child3 = document.querySelector(".child3");
 
 // ioに渡すコールバック関数を定義
 // entries→io.observe()には複数要素を登録できる
@@ -29,9 +31,9 @@ const options = {
   // root 交差対象を指定できる null=画面に入った場合
   root: null,
   // root対象からmarginを設定できる
-  rootMargin: "-200px 0px -200px 0px",
+  rootMargin: "-200px 0px -500px 0px",
   // 0が要素の上 1が要素の下 細かく設定することもできる
-  threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
+  // threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
 };
 
 // io→IntersectionObserver cb→callback関数
@@ -40,4 +42,6 @@ const io = new IntersectionObserver(cb, options);
 // ioに監視したいDOMを登録する
 // observeで対象の要素を指定する
 // observeに監視対象を引数で渡す
-io.observe(child);
+io.observe(child1);
+io.observe(child2);
+io.observe(child3);

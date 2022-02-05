@@ -39,5 +39,29 @@ body {
 }
 
 .idea {
-  height: 3000px;
+  width: 100%;
+  min-width: 1280px;
+  padding-left: 100px;
+  padding-bottom: 500px;
+  &__wrapper {
+    width: 1090px;
+    margin: 0 auto;
+    padding-top: 85px;
+  }
+  &__child {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+
+    &.child2 {
+      margin-top: 500px;
+    }
+    &.child3 {
+      margin-top: 500px;
+    }
+    &.inView {
+      opacity: 1;
+    }
+  }
 }
