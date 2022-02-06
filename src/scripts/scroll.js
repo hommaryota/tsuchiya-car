@@ -29,7 +29,7 @@ const options = {
   // root 交差対象を指定できる null=画面に入った場合
   root: null,
   // root対象からmarginを設定できる
-  rootMargin: "-200px 0px -500px 0px",
+  rootMargin: "-35% 0px -30% 0px",
   // 0が要素の上 1が要素の下 細かく設定することもできる
   // threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
 };

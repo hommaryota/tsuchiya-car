@@ -78,3 +78,69 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".tab")[index].classList.add("show");
   }
 });
+
+//
+document.querySelector(".recruit").addEventListener(
+  "mouseover",
+  function () {
+    document.querySelectorAll(".recruit__btn")[0].classList.add("hidden");
+    document.querySelectorAll(".recruit__hover")[0].classList.add("hover");
+  },
+  false
+);
+document.querySelector(".recruit").addEventListener(
+  "mouseout",
+  function () {
+    document.querySelectorAll(".recruit__btn")[0].classList.remove("hidden");
+    document.querySelectorAll(".recruit__hover")[0].classList.remove("hover");
+  },
+  false
+);
+document.querySelector(".recruit").addEventListener(
+  "mouseover",
+  function () {
+    document.querySelectorAll(".recruit__btn")[1].classList.add("hidden");
+    document.querySelectorAll(".recruit__hover")[1].classList.add("hover");
+  },
+  false
+);
+document.querySelector(".recruit").addEventListener(
+  "mouseout",
+  function () {
+    document.querySelectorAll(".recruit__btn")[1].classList.remove("hidden");
+    document.querySelectorAll(".recruit__hover")[1].classList.remove("hover");
+  },
+  false
+);
+
+// recruit scroll
+const myFunc = function () {
+  //Classを追加する要素を取得
+  const target1 = document.querySelector(".idea");
+  const target2 = document.querySelector(".history");
+  //Classを追加する位置を指定（ビューポート内）
+  const position = Math.floor(window.innerHeight * 0.7); //左記はビューポート内の上から75%の位置を指定
+
+  //要素の数だけループする
+  // for (let i = 0; i < target.length; i++) {
+  //要素の上部座標を取得する（小数点切り捨て）
+  let offsetBottom = Math.floor(target1.getBoundingClientRect().bottom);
+  let offsetTop = Math.floor(target2.getBoundingClientRect().top);
+  //要素の上部座標がpositionの位置を通過したら
+  if (offsetBottom < position) {
+    // console.log(offsetBottom)
+    // console.log(position);
+    document.querySelector(".recruit__main").classList.add("none");
+    document.querySelector(".recruit__greeting").classList.remove("none");
+  } else if (offsetBottom > position) {
+    document.querySelector(".recruit__main").classList.remove("none");
+    document.querySelector(".recruit__greeting").classList.add("none");
+  }
+  if (offsetBottom < position && offsetTop < position) {
+    document.querySelector(".recruit__main").classList.remove("none");
+    document.querySelector(".recruit__greeting").classList.add("none");
+  }
+  // }
+};
+//スクロールイベントリスナーに登録
+window.addEventListener("scroll", myFunc, false);
